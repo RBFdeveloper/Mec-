@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mec+ | Dashboard</title>
+    <link rel="stylesheet" href="style/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <nav class="sidebar">
+      <div class="logo">Mec+</div>
+      <ul>
+        <li><a href="#" onclick="showPage('dashboard')">Início</a></li>
+        <li><a href="#" onclick="showPage('servicos')">Serviços</a></li>
+        <li><a href="#">Manutenção</a></li>
+        <li><a href="#">Porte</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+
+    <main class="dashboard-main">
+      <!-- Página Principal (Dashboard) -->
+      <section id="dashboard" class="pagina">
+        <header class="dashboard-header">
+          <h1>Dashboard Mec+</h1>
+        </header>
+        <section class="dashboard-cards">
+          <div class="card">
+            <h3>Ordens de Serviço</h3>
+            <p>120</p>
+          </div>
+          <div class="card">
+            <h3>Clientes Ativos</h3>
+            <p>85</p>
+          </div>
+          <div class="card">
+            <h3>Veículos Atendidos</h3>
+            <p>240</p>
+          </div>
+          <div class="card">
+            <h3>Faturamento (Mensal)</h3>
+            <p>R$ 75.000</p>
+          </div>
+        </section>
+        <section class="dashboard-tabela">
+          <h2>Últimas Manutenções</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Veículo</th>
+                <th>Serviço</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>João Silva</td>
+                <td>Caminhão Volvo FH</td>
+                <td>Troca de óleo</td>
+                <td>Concluído</td>
+              </tr>
+              <tr>
+                <td>Junior Souza</td>
+                <td>Ônibus Mercedes</td>
+                <td>Revisão geral</td>
+                <td>Em andamento</td>
+              </tr>
+              <tr>
+                <td>Pedro Santos</td>
+                <td>Pick-up Ford Ranger</td>
+                <td>Substituição de freios</td>
+                <td>Pendente</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <!-- Página de Serviços -->
+      <section id="servicos" class="pagina" style="display: none">
+        <header class="dashboard-header">
+          <h1>Serviços</h1>
+        </header>
+        <section class="servico-list">
+          <div class="servico-card">
+            <img src="imagem/motor.png" alt="Motor" class="servico-img" />
+            <h3>Motor</h3>
+            <p>Diagnóstico preciso com equipamentos modernos na MecPlus.</p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img
+              src="imagem/oleo.png"
+              alt="Troca de Óleo"
+              class="servico-img"
+            />
+            <h3>Troca de Óleo</h3>
+            <p>Troca de óleo com vantagens exclusivas.</p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img
+              src="imagem/inspecao.png"
+              alt="Inspeção e Checagem"
+              class="servico-img"
+            />
+            <h3>Inspeção e Checagem</h3>
+            <p>
+              Segurança garantida com manutenção para todos os modelos e marcas.
+            </p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img src="imagem/freios.png" alt="Freios" class="servico-img" />
+            <h3>Freios</h3>
+            <p>
+              Priorize a segurança veicular com o sistema de freio de qualidade.
+            </p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img
+              src="imagem/ar-condicionado.png"
+              alt="Ar Condicionado"
+              class="servico-img"
+            />
+            <h3>Ar Condicionado</h3>
+            <p>Evite o incômodo de um ar condicionado ineficiente.</p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img
+              src="imagem/eletrica.png"
+              alt="Elétrica e Eletrônica"
+              class="servico-img"
+            />
+            <h3>Elétrica e Eletrônica</h3>
+            <p>
+              Diagnóstico e reparo de sistemas elétricos e eletrônicos,
+              incluindo verificações de bateria preventivas.
+            </p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img
+              src="imagem/revisao-manutencao.png"
+              alt="Revisão e Manutenção"
+              class="servico-img"
+            />
+            <h3>Revisão e Manutenção</h3>
+            <p>Garanta total confiança e segurança no seu veículo.</p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img
+              src="imagem/iluminacao.png"
+              alt="Iluminação"
+              class="servico-img"
+            />
+            <h3>Iluminação</h3>
+            <p>Verificação e substituição de lâmpadas de forma eficiente.</p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+          <div class="servico-card">
+            <img src="imagem/pneus.png" alt="Pneus" class="servico-img" />
+            <h3>Pneus</h3>
+            <p>Montagem profissional de pneus para sua segurança.</p>
+            <button class="btn">Ver Detalhes</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      // Função para mostrar/ocultar as seções
+      function showPage(page) {
+        // Esconde todas as seções
+        const pages = document.querySelectorAll(".pagina");
+        pages.forEach((p) => (p.style.display = "none"));
+
+        // Mostra a página desejada
+        document.getElementById(page).style.display = "block";
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.querySelector(".menu-icon");
+        const sidebar = document.querySelector(".sidebar");
+        const mainContent = document.querySelector(".dashboard-main");
+
+        menuIcon.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+          mainContent.classList.toggle("expanded");
+        });
+      });
+    </script>
+  </body>
+</html>
