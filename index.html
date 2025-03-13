@@ -4,206 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mec+ | Dashboard</title>
-    <link rel="stylesheet" href="style/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="style/index.css" />
   </head>
   <body>
-    <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
-    <nav class="sidebar">
+    <header>
       <div class="logo">Mec+</div>
-      <ul>
-        <li><a href="#" onclick="showPage('dashboard')">Início</a></li>
-        <li><a href="#" onclick="showPage('servicos')">Serviços</a></li>
-        <li><a href="#">Manutenção</a></li>
-        <li><a href="#">Porte</a></li>
-        <li><a href="#">Sobre nós</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+  
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  
+      <nav>
+          <ul class="menu">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#manutencao">Manutenção</a></li>
+              <li><a href="#porte">Porte</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+      </nav>
+  </header>
 
-    <main class="dashboard-main">
-      <!-- Página Principal (Dashboard) -->
-      <section id="dashboard" class="pagina">
-        <header class="dashboard-header">
-          <h1>Dashboard Mec+</h1>
-        </header>
-        <section class="dashboard-cards">
-          <div class="card">
-            <h3>Ordens de Serviço</h3>
-            <p>120</p>
-          </div>
-          <div class="card">
-            <h3>Clientes Ativos</h3>
-            <p>85</p>
-          </div>
-          <div class="card">
-            <h3>Veículos Atendidos</h3>
-            <p>240</p>
-          </div>
-          <div class="card">
-            <h3>Faturamento (Mensal)</h3>
-            <p>R$ 75.000</p>
-          </div>
-        </section>
-        <section class="dashboard-tabela">
-          <h2>Últimas Manutenções</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Cliente</th>
-                <th>Veículo</th>
-                <th>Serviço</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>João Silva</td>
-                <td>Caminhão Volvo FH</td>
-                <td>Troca de óleo</td>
-                <td>Concluído</td>
-              </tr>
-              <tr>
-                <td>Junior Souza</td>
-                <td>Ônibus Mercedes</td>
-                <td>Revisão geral</td>
-                <td>Em andamento</td>
-              </tr>
-              <tr>
-                <td>Pedro Santos</td>
-                <td>Pick-up Ford Ranger</td>
-                <td>Substituição de freios</td>
-                <td>Pendente</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+    <main>
+      <section id="inicio" class="mecanica">
+        <h1>Bem-vindo à Mec+</h1>
+        <p>O melhor serviço de manutenção para motores a diesel.</p>
       </section>
 
-      <!-- Página de Serviços -->
-      <section id="servicos" class="pagina" style="display: none">
-        <header class="dashboard-header">
-          <h1>Serviços</h1>
-        </header>
-        <section class="servico-list">
-          <div class="servico-card">
-            <img src="imagem/motor.png" alt="Motor" class="servico-img" />
+      <section id="manutencao" class="tipos__manutencao">
+        <h2 class="subtitulo__manutencao">Tipos de Manutenção</h2>
+        <div class="tipos__manutencao-cards">
+          <div class="card-manutencao">
+            <img src="imagem/preditiva.jpg" alt="Manutenção Preditiva" />
+            <h3>Manutenção Preditiva</h3>
+            <p>Monitoramento constante para prever falhas antes que ocorram.</p>
+          </div>
+          <div class="card-manutencao">
+            <img src="imagem/preventiva.jpg" alt="Manutenção Preventiva" />
+            <h3>Manutenção Preventiva</h3>
+            <p>
+              Inspeções regulares para reduzir o risco de falhas inesperadas.
+            </p>
+          </div>
+          <div class="card-manutencao">
+            <img src="imagem/corretiva.jpg" alt="Manutenção Corretiva" />
+            <h3>Manutenção Corretiva</h3>
+            <p>Reparo imediato quando ocorre uma falha no equipamento.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="porte" class="porte__carro">
+        <h2 class="subtitulo__porte">Atendemos Todos os Portes</h2>
+        <div class="porte__carro-cards">
+          <div class="card-porte">
+            <img src="imagem/pequeno.jpg" alt="Veículo de Pequeno Porte" />
+            <h3>Pequeno Porte</h3>
+            <p>Mini vans e caminhonetes.</p>
+          </div>
+          <div class="card-porte">
+            <img src="imagem/medio-grande.jpg" alt="Caminhões e Ônibus" />
+            <h3>Médio e Grande Porte</h3>
+            <p>Caminhões e ônibus de grande capacidade.</p>
+          </div>
+          <div class="card-porte">
+            <img
+              src="imagem/motor-estacionario.jpg"
+              alt="Motores Estacionários"
+            />
+            <h3>Motores Estacionários</h3>
+            <p>Geradores e sistemas industriais.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="servicos">
+        <h2 class="subtitulo__servicos">Nossos Serviços</h2>
+        <div class="servicos__cards">
+          <!-- Serviço 1 -->
+          <div class="card-servico">
+            <img src="imagem/motor.png" alt="Serviço de Motor" />
             <h3>Motor</h3>
-            <p>Diagnóstico preciso com equipamentos modernos na MecPlus.</p>
-            <button class="btn">Ver Detalhes</button>
+            <p>
+              Diagnóstico preciso com equipamentos modernos na Diesel Plus.
+              Troca de óleo com vantagens exclusivas.
+            </p>
           </div>
-          <div class="servico-card">
-            <img
-              src="imagem/oleo.png"
-              alt="Troca de Óleo"
-              class="servico-img"
-            />
-            <h3>Troca de Óleo</h3>
-            <p>Troca de óleo com vantagens exclusivas.</p>
-            <button class="btn">Ver Detalhes</button>
-          </div>
-          <div class="servico-card">
-            <img
-              src="imagem/inspecao.png"
-              alt="Inspeção e Checagem"
-              class="servico-img"
-            />
+
+          <!-- Serviço 2 -->
+          <div class="card-servico">
+            <img src="imagem/inspecao.png" alt="Inspeção e Checagem" />
             <h3>Inspeção e Checagem</h3>
             <p>
-              Segurança garantida com manutenção para todos os modelos e marcas.
+              Segurança garantida com manutenção para todos os modelos e marcas,
+              peças originais e atendimento personalizado por profissionais
+              treinados.
             </p>
-            <button class="btn">Ver Detalhes</button>
           </div>
-          <div class="servico-card">
-            <img src="imagem/freios.png" alt="Freios" class="servico-img" />
+
+          <!-- Serviço 3 -->
+          <div class="card-servico">
+            <img src="imagem/freios.png" alt="Serviço de Freios" />
             <h3>Freios</h3>
             <p>
-              Priorize a segurança veicular com o sistema de freio de qualidade.
+              Priorize a segurança veicular com o sistema de freio de qualidade
+              na Diesel Plus.
             </p>
-            <button class="btn">Ver Detalhes</button>
           </div>
-          <div class="servico-card">
-            <img
-              src="imagem/ar-condicionado.png"
-              alt="Ar Condicionado"
-              class="servico-img"
-            />
+
+          <!-- Serviço 4 -->
+          <div class="card-servico">
+            <img src="imagem/ar-condicionado.png" alt="Ar Condicionado" />
             <h3>Ar Condicionado</h3>
-            <p>Evite o incômodo de um ar condicionado ineficiente.</p>
-            <button class="btn">Ver Detalhes</button>
+            <p>
+              Evite o incômodo de um ar condicionado ineficiente. Priorize a
+              manutenção regular do sistema.
+            </p>
           </div>
-          <div class="servico-card">
-            <img
-              src="imagem/eletrica.png"
-              alt="Elétrica e Eletrônica"
-              class="servico-img"
-            />
+
+          <!-- Serviço 5 -->
+          <div class="card-servico">
+            <img src="imagem/eletrica.png" alt="Elétrica e Eletrônica" />
             <h3>Elétrica e Eletrônica</h3>
             <p>
-              Diagnóstico e reparo de sistemas elétricos e eletrônicos,
-              incluindo verificações de bateria preventivas.
+              Oferecemos diagnóstico e reparo de sistemas elétricos e
+              eletrônicos, incluindo verificações de bateria preventivas. Evite
+              surpresas com bateria descarregada.
             </p>
-            <button class="btn">Ver Detalhes</button>
           </div>
-          <div class="servico-card">
+
+          <!-- Serviço 6 -->
+          <div class="card-servico">
             <img
               src="imagem/revisao-manutencao.png"
               alt="Revisão e Manutenção"
-              class="servico-img"
             />
             <h3>Revisão e Manutenção</h3>
-            <p>Garanta total confiança e segurança no seu veículo.</p>
-            <button class="btn">Ver Detalhes</button>
+            <p>
+              Para total confiança e segurança no seu veículo, mantenha revisões
+              e manutenções em dia para assegurar sua segurança.
+            </p>
           </div>
-          <div class="servico-card">
-            <img
-              src="imagem/iluminacao.png"
-              alt="Iluminação"
-              class="servico-img"
-            />
+
+          <!-- Serviço 7 -->
+          <div class="card-servico">
+            <img src="imagem/iluminacao.png" alt="Iluminação" />
             <h3>Iluminação</h3>
-            <p>Verificação e substituição de lâmpadas de forma eficiente.</p>
-            <button class="btn">Ver Detalhes</button>
+            <p>
+              Problemas com as luzes do seu veículo? Conte com a Diesel Plus
+              para verificação e substituição de lâmpadas.
+            </p>
           </div>
-          <div class="servico-card">
-            <img src="imagem/pneus.png" alt="Pneus" class="servico-img" />
+
+          <!-- Serviço 8 -->
+          <div class="card-servico">
+            <img src="imagem/pneus.png" alt="Pneus" />
             <h3>Pneus</h3>
-            <p>Montagem profissional de pneus para sua segurança.</p>
-            <button class="btn">Ver Detalhes</button>
+            <p>
+              A montagem profissional de pneus na Diesel Plus assegura economia
+              e segurança para o seu veículo. Agende já a substituição dos seus
+              pneus.
+            </p>
           </div>
-        </section>
+        </div>
       </section>
     </main>
 
-    <script>
-      // Função para mostrar/ocultar as seções
-      function showPage(page) {
-        // Esconde todas as seções
-        const pages = document.querySelectorAll(".pagina");
-        pages.forEach((p) => (p.style.display = "none"));
-
-        // Mostra a página desejada
-        document.getElementById(page).style.display = "block";
-      }
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuIcon = document.querySelector(".menu-icon");
-        const sidebar = document.querySelector(".sidebar");
-        const mainContent = document.querySelector(".dashboard-main");
-
-        menuIcon.addEventListener("click", function () {
-          sidebar.classList.toggle("active");
-          mainContent.classList.toggle("expanded");
-        });
-      });
-    </script>
+    <footer>
+      <p>© 2025 Mec+. Todos os direitos reservados.</p>
+      <div class="social-icone">
+        <a href="#"><img src="imagem/facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="imagem/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="imagem/linkedin.png" alt="LinkedIn" /></a>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,269 @@
+:root {
+    --cabecalho-rodape: #222;
+    --destaque-hover: #ff9900;
+    --fundo-geral: #f4f4f4;
+    --texto-principal: #333;
+    --cor-fundo-card: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-geral);
+    color: var(--texto-principal);
+}
+
+
+/* Menu fixo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--cabecalho-rodape);
+    color: var(--cor-fundo-card);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-fundo-card);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--destaque-hover);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* mecanica Seção */
+.mecanica {
+    text-align: center;
+    padding: 150px 20px;
+    background: url('../imagem/carros.jpg') center/cover no-repeat;
+    color: var(--cor-fundo-card);
+}
+
+.mecanica h1 {
+    font-size: 40px;
+}
+
+.mecanica p {
+    font-size: 20px;
+}
+
+/* Seção de manutencao */
+.tipos__manutencao,
+.porte__carro {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.subtitulo__manutencao,
+.subtitulo__porte {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.tipos__manutencao-cards,
+.porte__carro-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-manutencao {
+    background: var(--cor-fundo-card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    width: 300px;
+}
+
+.card-manutencao:hover {
+    transform: scale(1.05);
+    background-color: var(--destaque-hover);
+    color: var(--cor-fundo-card);
+}
+
+.card-manutencao,
+.card-porte h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-porte {
+    background-color: var(--fundo--geral);
+    /* Cor igual ao fundo */
+    border: none;
+    /* Remove borda */
+    text-align: center;
+    padding: 15px;
+    width: 250px;
+    box-shadow: none;
+    /* Remove efeitos de sombra */
+}
+
+.card-manutencao img {
+    width: 100%;
+    /* imagem ocupa toda a largura do card */
+    height: 150px;
+    /* altura */
+    object-fit: cover;
+    /* deixa a imagem ajustada */
+    border-radius: 8px 8px 0 0;
+    /* bordas superiores arredondadas */
+}
+
+.card-porte img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    /*imagem preenche o espaço sem distorcer */
+    border-radius: 8px;
+}
+
+/* Seção de Serviços */
+.servicos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.subtitulo__servicos {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.servicos__cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-servico {
+    background: var(--cor-fundo-card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    width: 280px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-servico:hover {
+    transform: scale(1.05);
+    background-color: var(--destaque-hover);
+    color: var(--cor-fundo-card);
+}
+
+.card-servico h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-servico img {
+    width: 63%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-servico p {
+    font-size: 16px;
+    color: var(--texto-principal);
+    margin-top: 10px;
+}
+
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: var(--cabecalho-rodape);
+    color: var(--cor-fundo-card);
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.social-icone img {
+    width: 30px;
+    margin: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--cabecalho-rodape);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        padding: 15px 0;
+    }
+
+    /* Quando o checkbox está marcado, o menu aparece */
+    #menu-toggle:checked ~ nav ul {
+        display: flex;
+    }
+    .tipos__manutencao-cards,
+    .porte__carro-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicos-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

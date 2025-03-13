@@ -35,12 +35,22 @@ body {
 }
 
 .input-group input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+.entrar {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+
+}
 button {
     width: 100%;
     padding: 10px;
@@ -50,6 +60,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
 
 button:hover {
     background: #444;
