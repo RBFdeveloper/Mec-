@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mec+ | Dashboard</title>
+    <title>MecPlus | Dashboard</title>
     <link rel="stylesheet" href="style/index2.css" />
     <link
       rel="stylesheet"
@@ -12,7 +12,7 @@
   </head>
   <body>
     <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
     <nav class="sidebar">
       <div class="logo">Mec+</div>
@@ -20,15 +20,15 @@
         <li><a href="#" onclick="showPage('dashboard')">Início</a></li>
         <li><a href="#" onclick="showPage('servicos')">Serviços</a></li>
         <li><a href="#" onclick="showPage('manutencao')">Manutenção</a></li>
+        <li><a href="#" onclick="showPage('checklist')">Checklist</a></li>
         <li><a href="index.html">SAIR</a></li>
       </ul>
     </nav>
 
     <main class="dashboard-main">
-      
       <section id="dashboard" class="pagina">
         <header class="dashboard-header">
-          <h1>Dashboard Mec+</h1>
+          <h1>Mec+</h1>
         </header>
         <section class="dashboard-cards">
           <div class="card">
@@ -59,88 +59,31 @@
                 <th>Status</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>João Silva</td>
-                <td>Caminhão Volvo FH</td>
-                <td>Troca de óleo</td>
-                <td>Concluído</td>
-              </tr>
-              <tr>
-                <td>Junior Souza</td>
-                <td>Ônibus Mercedes</td>
-                <td>Revisão geral</td>
-                <td>Em andamento</td>
-              </tr>
-              <tr>
-                <td>Pedro Santos</td>
-                <td>Pick-up Ford Ranger</td>
-                <td>Substituição de freios</td>
-                <td>Pendente</td>
-              </tr>
-            </tbody>
-            <tr>
-              <td>Ana Oliveira</td>
-              <td>Furgão Iveco Daily</td>
-              <td>Troca de pastilhas de freio</td>
-              <td>Concluído</td>
-            </tr>
-            <tr>
-              <td>Roberto Lima</td>
-              <td>Caminhão Scania P360</td>
-              <td>Revisão de suspensão</td>
-              <td>Em andamento</td>
-            </tr>
-            <tr>
-              <td>Lucia Martins</td>
-              <td>Carro VW Gol</td>
-              <td>Troca de óleo e filtros</td>
-              <td>Pendente</td>
-            </tr>
-            <tr>
-              <td>Carlos Fernandes</td>
-              <td>Picape Toyota Hilux</td>
-              <td>Alinhamento e balanceamento</td>
-              <td>Concluído</td>
-            </tr>
-            <tr>
-              <td>Fernanda Costa</td>
-              <td>Carro Fiat Uno</td>
-              <td>Revisão de ar condicionado</td>
-              <td>Em andamento</td>
-            </tr>
+            <tbody></tbody>
           </table>
         </section>
       </section>
 
-      
+      <!--Serviços-->
       <section id="servicos" class="pagina" style="display: none">
         <header class="dashboard-header">
           <h1>Serviços</h1>
         </header>
         <section class="servico-list">
           <div class="servico-card">
-            <img src="imagem/motor.png" alt="Motor" class="servico-img" />
+            <img src="imagem/motor.png" alt="">
             <h3>Motor</h3>
             <p>Diagnóstico preciso com equipamentos modernos na MecPlus.</p>
             <button class="btn">Ver Detalhes</button>
           </div>
           <div class="servico-card">
-            <img
-              src="imagem/oleo.png"
-              alt="Troca de Óleo"
-              class="servico-img"
-            />
+           <img src="imagem/oleo.png" alt="">
             <h3>Troca de Óleo</h3>
             <p>Troca de óleo com vantagens exclusivas.</p>
             <button class="btn">Ver Detalhes</button>
           </div>
           <div class="servico-card">
-            <img
-              src="imagem/inspecao.png"
-              alt="Inspeção e Checagem"
-              class="servico-img"
-            />
+           <img src="imagem/inspecao.png" alt="">
             <h3>Inspeção e Checagem</h3>
             <p>
               Segurança garantida com manutenção para todos os modelos e marcas.
@@ -148,7 +91,7 @@
             <button class="btn">Ver Detalhes</button>
           </div>
           <div class="servico-card">
-            <img src="imagem/freios.png" alt="Freios" class="servico-img" />
+           <img src="imagem/freios.png" alt="">
             <h3>Freios</h3>
             <p>
               Priorize a segurança veicular com o sistema de freio de qualidade.
@@ -156,119 +99,123 @@
             <button class="btn">Ver Detalhes</button>
           </div>
           <div class="servico-card">
-            <img
-              src="imagem/ar-condicionado.png"
-              alt="Ar Condicionado"
-              class="servico-img"
-            />
+           <img src="imagem/ar-condicionado.png" alt="">
             <h3>Ar Condicionado</h3>
             <p>Evite o incômodo de um ar condicionado ineficiente.</p>
             <button class="btn">Ver Detalhes</button>
           </div>
           <div class="servico-card">
-            <img
-              src="imagem/eletrica.png"
-              alt="Elétrica e Eletrônica"
-              class="servico-img"
-            />
+           <img src="imagem/eletrica.png" alt="">
             <h3>Elétrica e Eletrônica</h3>
-            <p>
-              Diagnóstico e reparo de sistemas elétricos e eletrônicos,
-              incluindo verificações de bateria preventivas.
-            </p>
+            <p>Diagnóstico e reparo de sistemas elétricos e eletrônicos.</p>
             <button class="btn">Ver Detalhes</button>
           </div>
           <div class="servico-card">
-            <img
-              src="imagem/revisao-manutencao.png"
-              alt="Revisão e Manutenção"
-              class="servico-img"
-            />
-            <h3>Revisão e Manutenção</h3>
-            <p>Garanta total confiança e segurança no seu veículo.</p>
-            <button class="btn">Ver Detalhes</button>
-          </div>
-          <div class="servico-card">
-            <img
-              src="imagem/iluminacao.png"
-              alt="Iluminação"
-              class="servico-img"
-            />
-            <h3>Iluminação</h3>
-            <p>Verificação e substituição de lâmpadas de forma eficiente.</p>
-            <button class="btn">Ver Detalhes</button>
-          </div>
-          <div class="servico-card">
-            <img src="imagem/pneus.png" alt="Pneus" class="servico-img" />
-            <h3>Pneus</h3>
-            <p>Montagem profissional de pneus para sua segurança.</p>
-            <button class="btn">Ver Detalhes</button>
-          </div>
+            <img src="imagem/revisao-manutencao.png" alt="">
+             <h3>Revisão e Manutenção</h3>
+             <p>Diagnóstico e reparo de sistemas elétricos e eletrônicos.</p>
+             <button class="btn">Ver Detalhes</button>
+           </div>
+           <div class="servico-card">
+            <img src="imagem/iluminacao.png" alt="">
+             <h3>Iluminação</h3>
+             <p>Diagnóstico e reparo de sistemas elétricos e eletrônicos.</p>
+             <button class="btn">Ver Detalhes</button>
+           </div>
+           <div class="servico-card">
+            <img src="imagem/pneus.png" alt="">
+             <h3>Pneus</h3>
+             <p>Diagnóstico e reparo de sistemas elétricos e eletrônicos.</p>
+             <button class="btn">Ver Detalhes</button>
+           </div>
         </section>
       </section>
 
+      <!--Manutenção Agendamento-->
       <section id="manutencao" class="pagina" style="display: none">
-        <header class="dashboard-header">
-          <h1>Manutenção</h1>
-        </header>
-      
-        <section class="servico-list">
-          <div class="servico-card">
-            <img src="imagem/oleo.png" alt="Troca de Óleo" />
-            <h3>Troca de Óleo</h3>
-            <p>Mantenha seu motor funcionando de maneira eficiente com a troca de óleo.</p>
-            <button class="btn">Agendar</button>
-          </div>
-          <div class="servico-card">
-            <img src="imagem/revisao-manutencao.png" alt="Revisão" />
-            <h3>Revisão Completa</h3>
-            <p>Revisão completa para garantir que seu veículo esteja em perfeitas condições.</p>
-            <button class="btn">Agendar</button>
-          </div>
-          <div class="servico-card">
-            <img src="imagem/freios.png" alt="Freios" />
-            <h3>Freios</h3>
-            <p>Evite problemas no sistema de frenagem com uma revisão especializada.</p>
-            <button class="btn">Agendar</button>
-          </div>
-        </section>
-      
-        <section class="form-agendamento">
+        <div class="form-agendamento">
           <h3>Agendamento de Manutenção</h3>
-          <form>
+          <form id="manutencaoForm">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-      
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome"
+              required
+            />
+
             <label for="modelo">Modelo do Carro</label>
-            <input type="text" id="modelo" name="modelo" placeholder="Modelo do carro" required />
-      
+            <input
+              type="text"
+              id="modelo"
+              name="modelo"
+              placeholder="Modelo do carro"
+              required
+            />
+
             <label for="placa">Placa</label>
-            <input type="text" id="placa" name="placa" placeholder="Placa do veículo" required />
-      
+            <input
+              type="text"
+              id="placa"
+              name="placa"
+              placeholder="Placa do veículo"
+              required
+            />
+
+            <label for="servico">Serviço</label>
+            <input
+              type="text"
+              id="servico"
+              name="servico"
+              placeholder="Tipo de Serviço"
+              required
+            />
+
             <label for="contato">Contato</label>
-            <input type="text" id="contato" name="contato" placeholder="Telefone ou e-mail" required />
-      
+            <input
+              type="text"
+              id="contato"
+              name="contato"
+              placeholder="Telefone ou e-mail"
+              required
+            />
+
             <label for="mecanico">Escolha o Mecânico</label>
             <select id="mecanico" name="mecanico" required>
+              <option selected disabled value="">Selecione</option>
               <option value="mecanico1">Fernando Ferreira</option>
               <option value="mecanico2">Ramon Barbosa</option>
               <option value="mecanico3">Lucas Martins</option>
             </select>
-      
+
             <button type="submit">Agendar Manutenção</button>
           </form>
-        </section>
+        </div>
+      </section>
+
+      <section id="checklist" class="pagina" style="display: none">
+        <header class="dashboard-header">
+          <h1>Lista de Verificação</h1>
+        </header>
+        <div class="checklist-container">
+          <div class="novo-item-container">
+            <input
+              type="text"
+              id="novoItem"
+              placeholder="Digite um serviço para verificação"
+              class="novo-item-input"
+            />
+            <button onclick="adicionarNovoItem()" class="btn-adicionar">
+              Adicionar
+            </button>
+            <div id="errorMessage" class="error-message"></div>
+          </div>
+          <div id="checklistItems" class="checklist-items"></div>
+        </div>
       </section>
     </main>
 
-    <script>
-      function showPage(page) {
-        const pages = document.querySelectorAll('.pagina');
-        pages.forEach(p => p.style.display = 'none');
-        document.getElementById(page).style.display = 'block';
-      }
-
-      showPage('dashboard');
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
